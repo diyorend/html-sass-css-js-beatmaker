@@ -1,0 +1,127 @@
+// Header
+
+header {
+  min-height: 10vh;
+  text-align: center;
+  padding: 1rem 5%;
+  h1 {
+    text-transform: uppercase;
+    padding: 1rem;
+  }
+}
+
+// Main
+.sequencer {
+  min-height: 90vh;
+  @include flex(center, center, column);
+  text-align: center;
+}
+
+// section
+
+// Big div
+.track {
+  @include flex(space-between, center, row);
+  min-width: 90%;
+  flex-wrap: wrap;
+}
+
+// controls div
+.controls {
+  @include flex(space-between, center, row);
+  flex: 1 1 50rem;
+
+  h2 {
+    width: 100%;
+    margin-right: 2rem;
+    padding: 1rem;
+  }
+
+  button,
+  select {
+    margin-right: 2rem;
+  }
+}
+
+button.active {
+  background: $bg-color-active;
+}
+
+.hihat,
+.kick,
+.snare {
+  flex: 2 1 50rem;
+  @include flex(center, center, row);
+}
+// pad div
+
+.pad {
+  margin: 1rem 0.5rem;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+}
+
+// pads
+.kick-pad {
+  background: $color-kick;
+}
+.kick-pad.active {
+  background: $color-kick-active;
+}
+.snare-pad {
+  background: $color-snare;
+}
+.snare-pad.active {
+  background: $color-snare-active;
+}
+.hihat-pad {
+  background: $color-hihat;
+}
+.hihat-pad.active {
+  background: $color-hihat-active;
+}
+
+// Play button
+
+button.play {
+  background: $bg-color-active;
+  padding: 1rem 8rem;
+}
+.tempo {
+  p {
+    background: linear-gradient(rgba(19, 195, 226, 0.5), transparent);
+    color: rgba(5, 5, 5, 0.7);
+  }
+}
+.tempo-slider {
+  margin: 1rem 0 0 0;
+  appearance: none;
+  padding: 1px;
+  width: 70vw;
+  position: relative;
+  cursor: pointer;
+  border-radius: 1rem;
+  background: rgba(19, 195, 226, 0.5);
+}
+
+// Footer
+footer {
+  min-height: 10vh;
+  margin: auto;
+  width: 90%;
+  padding: 1rem 0;
+  .footer {
+    padding: 1rem;
+    flex-wrap: wrap;
+    @include flex(space-between, center, row);
+    h4 {
+      flex: 2 1 40rem;
+      font-weight: normal;
+    }
+    ul {
+      @include flex(space-around, center, row);
+      flex: 1 1 40rem;
+    }
+  }
+}

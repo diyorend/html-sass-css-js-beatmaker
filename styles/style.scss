@@ -1,0 +1,28 @@
+// Vars
+
+$header1: 4rem;
+$header2: 2.5rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2.5rem;
+$bg-color: rgba(0, 0, 0, 0.5);
+$bg-color-active: rgba(0, 0, 0, 0.9);
+$color-hihat: rgb(255, 177, 132);
+$color-hihat-active: rgb(255, 127, 80);
+$color-snare: rgb(220, 70, 110);
+$color-snare-active: rgb(220, 20, 60);
+$color-kick: rgb(150, 200, 237);
+$color-kick-active: rgb(100, 149, 237);
+
+// blah
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// imports
+@import "global";
+@import "intro";

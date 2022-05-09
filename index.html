@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./icons/iconmonstr-sound-white-1.svg" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Beatmaker</title>
+  </head>
+  <body>
+    <header>
+      <h1>Beatmaker</h1>
+    </header>
+    <main>
+      <section class="sequencer">
+        <div class="kick-track track">
+          <div class="controls">
+            <h2>Kick</h2>
+            <button data-track="0" class="mute kick-volume">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+            <select name="kick-select" class="select" id="kick-select">
+              <option selected value="./sounds/kick-classic.wav">
+                Classic Kick
+              </option>
+              <option value="./sounds/kick-808.wav">808 Kick</option>
+              <option value="./sounds/kick-heavy.wav">Heavy Kick</option>
+            </select>
+          </div>
+
+          <div class="kick">
+            <div class="pad kick-pad b0"></div>
+            <div class="pad kick-pad b1"></div>
+            <div class="pad kick-pad b2"></div>
+            <div class="pad kick-pad b3"></div>
+            <div class="pad kick-pad b4"></div>
+            <div class="pad kick-pad b5"></div>
+            <div class="pad kick-pad b6"></div>
+            <div class="pad kick-pad b7"></div>
+          </div>
+        </div>
+        <div class="snare-track track">
+          <div class="controls">
+            <h2>Snare</h2>
+            <button data-track="1" class="mute snare-volume">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+            <select class="select" name="snare-select" id="snare-select">
+              <option selected value="./sounds/snare-acoustic01.wav">
+                Acoustic Snare
+              </option>
+              <option value="./sounds/snare-808.wav">808 Snare</option>
+              <option value="./sounds/snare-vinyl02.wav">Vinyl Snare</option>
+            </select>
+          </div>
+
+          <div class="snare">
+            <div class="pad snare-pad b0"></div>
+            <div class="pad snare-pad b1"></div>
+            <div class="pad snare-pad b2"></div>
+            <div class="pad snare-pad b3"></div>
+            <div class="pad snare-pad b4"></div>
+            <div class="pad snare-pad b5"></div>
+            <div class="pad snare-pad b6"></div>
+            <div class="pad snare-pad b7"></div>
+          </div>
+        </div>
+
+        <div class="hihat-track track">
+          <div class="controls">
+            <h2>Hihat</h2>
+            <button data-track="2" class="mute hihat-volume">
+              <i class="fas fa-volume-mute"></i>
+            </button>
+            <select class="select" name="hihat-select" id="hihat-select">
+              <option selected value="./sounds/hihat-acoustic01.wav">
+                Acoustic Hihat
+              </option>
+              <option value="./sounds/hihat-808.wav">808 Hihat</option>
+              <option value="./sounds/hihat-digital.wav">Digitial Hihat</option>
+            </select>
+          </div>
+
+          <div class="hihat">
+            <div class="pad hihat-pad b0"></div>
+            <div class="pad hihat-pad b1"></div>
+            <div class="pad hihat-pad b2"></div>
+            <div class="pad hihat-pad b3"></div>
+            <div class="pad hihat-pad b4"></div>
+            <div class="pad hihat-pad b5"></div>
+            <div class="pad hihat-pad b6"></div>
+            <div class="pad hihat-pad b7"></div>
+          </div>
+        </div>
+
+        <button class="play">Play</button>
+
+        <div class="tempo">
+          <input
+            type="range"
+            max="300"
+            min="20"
+            class="tempo-slider"
+            value="150"
+          />
+          <p>Tempo: <span class="tempo-nr">150</span></p>
+        </div>
+      </section>
+      <audio src="./sounds/kick-classic.wav" class="kick-audio"></audio>
+      <audio src="./sounds/snare-acoustic01.wav" class="snare-audio"></audio>
+      <audio src="./sounds/hihat-acoustic01.wav" class="hihat-audio"></audio>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <h4>Diyor End &copy; 2022</h4>
+        <ul>
+          <li>
+            <a
+              title="Twitter"
+              target="_blank"
+              href="https://twitter.com/diyorend"
+              ><img src="./icons/twitter 1.svg" alt="twitter"
+            /></a>
+          </li>
+          <li>
+            <a
+              title="Instagram"
+              target="_blank"
+              href="https://instagram.com/diyorend"
+              ><img src="./icons/instagram 1.svg" alt="instagram"
+            /></a>
+          </li>
+          <li>
+            <a title="Telegram" target="_blank" href="https://t.me/diyorend"
+              ><img src="./icons/telegram-svgrepo-com.svg" alt="telegram"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+      integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

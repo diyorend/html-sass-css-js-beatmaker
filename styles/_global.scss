@@ -1,0 +1,139 @@
+// imports
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Noto+Sans&display=swap");
+
+// Document
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  transition: all 0.3s ease;
+}
+
+body {
+  animation: opening 0.3s ease-in-out;
+  font-family: "Nato Sans", "Poppins", "Lato", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("../icons/pexels-picjumbocom-196652\(1\).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  scroll-behavior: smooth;
+}
+
+// Tags
+h1,
+h2,
+button,
+select,
+.footer,
+.tempo p {
+  border-radius: 1rem;
+  background: $bg-color;
+  color: #fff;
+  font-weight: normal;
+}
+
+button,
+select {
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover {
+    background: $bg-color-active;
+  }
+}
+// headers
+h1 {
+  font-size: $header1;
+}
+h2 {
+  font-size: $header2;
+}
+h3 {
+  font-size: $header3;
+}
+h4,
+h5 {
+  font-size: $header4;
+}
+
+// elements
+ul {
+  list-style: none;
+}
+li,
+button,
+label,
+p,
+a,
+select {
+  font-size: $text;
+  font-family: "Nato Sans", "Poppins", "Lato", sans-serif;
+}
+button,
+a,
+textarea,
+select {
+  &:focus {
+    outline: none;
+  }
+  padding: 1rem;
+}
+i,
+svg {
+  pointer-events: none;
+}
+
+// Animations
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+// Mobile friendly
+
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 45%;
+  }
+  .track {
+    padding: 0rem 3rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  #kick-select,
+  #snare-select,
+  #hihat-select {
+    margin-right: 0;
+  }
+
+  // footer
+  .footer {
+    text-align: center;
+    h4 {
+      order: 2;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 40%;
+  }
+}

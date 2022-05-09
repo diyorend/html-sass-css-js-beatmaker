@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Noto+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+body {
+  -webkit-animation: opening 0.3s ease-in-out;
+          animation: opening 0.3s ease-in-out;
+  font-family: "Nato Sans", "Poppins", "Lato", sans-serif;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent)), url("../icons/pexels-picjumbocom-196652(1).jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("../icons/pexels-picjumbocom-196652(1).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+button,
+select,
+.footer,
+.tempo p {
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: normal;
+}
+
+button,
+select {
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+button:hover,
+select:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4,
+h5 {
+  font-size: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li,
+button,
+label,
+p,
+a,
+select {
+  font-size: 2.5rem;
+  font-family: "Nato Sans", "Poppins", "Lato", sans-serif;
+}
+
+button,
+a,
+textarea,
+select {
+  padding: 1rem;
+}
+
+button:focus,
+a:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+@-webkit-keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes playTrack {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes playTrack {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 45%;
+  }
+  .track {
+    padding: 0rem 3rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #kick-select,
+  #snare-select,
+  #hihat-select {
+    margin-right: 0;
+  }
+  .footer {
+    text-align: center;
+  }
+  .footer h4 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+header {
+  min-height: 10vh;
+  text-align: center;
+  padding: 1rem 5%;
+}
+
+header h1 {
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.sequencer {
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-width: 90%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50rem;
+          flex: 1 1 50rem;
+}
+
+.controls h2 {
+  width: 100%;
+  margin-right: 2rem;
+  padding: 1rem;
+}
+
+.controls button,
+.controls select {
+  margin-right: 2rem;
+}
+
+button.active {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.hihat,
+.kick,
+.snare {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 50rem;
+          flex: 2 1 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.pad {
+  margin: 1rem 0.5rem;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background: #96c8ed;
+}
+
+.kick-pad.active {
+  background: cornflowerblue;
+}
+
+.snare-pad {
+  background: #dc466e;
+}
+
+.snare-pad.active {
+  background: crimson;
+}
+
+.hihat-pad {
+  background: #ffb184;
+}
+
+.hihat-pad.active {
+  background: coral;
+}
+
+button.play {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1rem 8rem;
+}
+
+.tempo p {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(19, 195, 226, 0.5)), to(transparent));
+  background: linear-gradient(rgba(19, 195, 226, 0.5), transparent);
+  color: rgba(5, 5, 5, 0.7);
+}
+
+.tempo-slider {
+  margin: 1rem 0 0 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 1px;
+  width: 70vw;
+  position: relative;
+  cursor: pointer;
+  border-radius: 1rem;
+  background: rgba(19, 195, 226, 0.5);
+}
+
+footer {
+  min-height: 10vh;
+  margin: auto;
+  width: 90%;
+  padding: 1rem 0;
+}
+
+footer .footer {
+  padding: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .footer h4 {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 40rem;
+          flex: 2 1 40rem;
+  font-weight: normal;
+}
+
+footer .footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+/*# sourceMappingURL=style.css.map */
